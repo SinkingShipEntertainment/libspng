@@ -4,7 +4,7 @@ authors = [
     "Randy"
 ]
 
-version = "0.7.3.sse.1.0.0"
+version = "0.7.3.sse.1.0.1"
 
 description = \
     """
@@ -61,3 +61,6 @@ def commands():
     env.SPNG_ROOT = "{root}"
     env.SPNG_LOCATION = "{root}"
     env.LD_LIBRARY_PATH.append("{root}/lib")
+
+    if building:
+        env.CMAKE_MODULE_PATH.append("{root}/cmake")
